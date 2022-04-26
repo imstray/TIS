@@ -181,16 +181,16 @@ public class Game {
         int choice = display.getTheChoice(1, 2);
         if (choice == 1) {
             playGame();
-        }
-        if (hasAnsweredIncorrectly){
-            display.answeredIncorrectly();
-        }else{
-            output.outputString("Congrats you managed to win $"+moneyWon);
-            display.winnerScreen();
 
+            if (hasAnsweredIncorrectly) {
+                display.answeredIncorrectly();
+            } else {
+                output.outputString("Congrats you managed to win $" + moneyWon);
+                display.winnerScreen();
+
+            }
         }
         output.outputString("Thank you for your time.");
-
     }
 
     public static void main(String[] args) {
